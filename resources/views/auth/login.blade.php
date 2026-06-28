@@ -8,8 +8,16 @@
     </head>
 
     <body>
-        <form action="{{ url('') }}" method="POST">
+        <form action="{{ url('login.post') }}" method="POST">
+        @csrf
+           <label for="email">Email Address</label>
+           <input type="text" placeholder="Enter your email" required>
 
+           <label for="password">Password</label>
+           <input type="password" placeholder="Enter your password" required>
+
+           <button type="submit" class="border border-black p-2 rounded-sm cursor-pointer">Login</button>
+         <p class="text-sm font-arial">Don't have an account?<a href="/signup" class="text-blue-600 underline">Click Here</a></p>
 
         </form>
     </body>
